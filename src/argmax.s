@@ -20,8 +20,8 @@ argmax:
     # s0 -> index of the largest element
     # s1 -> largest value
     addi sp, sp, -8
-    sw s0, 8(sp)
-    sw s1, 4(sp)
+    sw s0, 4(sp)
+    sw s1, 0(sp)
 
     # Check the length of the array
     addi t0, x0, 1 
@@ -54,7 +54,7 @@ loop_start:
 loop_end:
     add a0, s0, x0
     # Epilogue
-    lw s0, 8(sp)
-    lw s1, 4(sp)
+    lw s0, 4(sp)
+    lw s1, 0(sp)
     addi sp, sp, 8
     ret
