@@ -28,7 +28,6 @@ main:
     jal matmul
 
     # Print the output (use print_int_array in utils.s)
-    # Print m0 after running relu
     mv a0 s2
     li a1 3
     li a2 3
