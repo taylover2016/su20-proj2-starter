@@ -30,6 +30,7 @@ read_matrix:
     # s1 -> pointer to the row of the matrix
     # s2 -> pointer to the col of the matrix
     # s3 -> pointer to the filename string / file descriptor
+    # s4 -> matrix size
     addi sp, sp, -24
     sw ra, 20(sp)
     sw s4, 16(sp)
