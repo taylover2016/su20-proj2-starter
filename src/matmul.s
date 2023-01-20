@@ -27,10 +27,10 @@ matmul:
     # Error checks
     # Check the dimensions of m0
     li t0, 1
-    beq a1, t0, exception_m0
-    beq a2, t0, exception_m0
-    beq a4, t0, exception_m1
-    beq a5, t0, exception_m1
+    blt a1, t0, exception_m0
+    blt a2, t0, exception_m0
+    blt a4, t0, exception_m1
+    blt a5, t0, exception_m1
     bne a2, a4, exception_match
 
     # Prologue

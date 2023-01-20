@@ -25,10 +25,11 @@ argmax:
 
     # Check the length of the array
     addi t0, x0, 1 
-    bge a1, t0, loop_start # if a1 >= t0 then jump to loop_start
+    bge a1, t0, continue # if a1 >= t0 then jump to loop_start
     addi a1, x0, 7
     j exit2
 
+continue:
     # Set the initial value for the largest element and the index
     add s0, x0, x0
     lw s1, 0(a0)
